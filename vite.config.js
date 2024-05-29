@@ -15,11 +15,11 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  css:{
-    preprocessorOptions:{
-      scss:{
-        additionalData: '@import "@/assets/scss/globalVar.scss";@import "@/assets/scss/globalMixin.scss";'
-      }
-    }
-  }
+  // css:{
+  //   preprocessorOptions:{
+  //     scss:{
+  //       additionalData: '@import "@/assets/scss/globalVar.scss";@import "@/assets/scss/globalMixin.scss";'
+  //     }
+  //   }
+  // }
 })
