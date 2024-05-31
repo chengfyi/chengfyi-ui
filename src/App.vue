@@ -1,20 +1,20 @@
 <template>
   <div>
-    <cfy-button @click="visible = () => close(true)">open</cfy-button>
-    <cfy-dialog title="标题title" v-model:visible="visible">
-      123123123
-    </cfy-dialog>
+    <cfy-input placeholder="请输入" type="text" v-model="name1" clearable></cfy-input>
+    <cfy-input type="password" v-model="name2" showPassWord></cfy-input>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+const emit = defineEmits(['input'])
+const name1 = ref('')
+const name2 = ref('')
 
-const visible = ref(false)
-
-const close = (bool) => {
-  visible.value = bool
-}
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.cfy-input {
+  width: 180px !important;
+}
+</style>
